@@ -1,0 +1,14 @@
+.orderItem {
+    display: flex;
+    justify-content: space-between;
+}
+.orderItem_picContext {
+    width: 100px;
+    height: 100px;
+}
+.orderItem_context {
+    flex-grow: 1;
+}
+.orderItem_button {
+    align-self: flex-end;
+}
