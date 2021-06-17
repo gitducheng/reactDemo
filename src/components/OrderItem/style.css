@@ -12,3 +12,12 @@
 .orderItem_button {
     align-self: flex-end;
 }
+.orderItem_star_grey {
+    color: grey;
+}
+.orderItem_star_light {
+    color: #d7000f;
+}
+.orderItem_button_grey {
+    background-color: grey;
+}

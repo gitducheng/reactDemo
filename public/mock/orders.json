@@ -1,17 +1,23 @@
 [
     {
+        "id": 1,
         "product": "第一个菜",
         "detail": "菜品描述1",
-        "price": "$10"
+        "price": "$10",
+        "isComment": false
     },
     {
+        "id": 2,
         "product": "第二个菜",
         "detail": "菜品描述2",
-        "price": "$20"
+        "price": "$20",
+        "isComment": false
     },
     {
+        "id": 3,
         "product": "第三个菜",
         "detail": "菜品描述3",
-        "price": "$30"
+        "price": "$30",
+        "isComment": false
     }
 ]
