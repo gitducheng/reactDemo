@@ -1,6 +1,7 @@
 // import React from 'react';
 import OrderList from '../OrderList';
 import Header from '../Header'
+import Hooks from '../Hooks'
 import './style.css';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <Header />
       <OrderList />
+      <Hooks />
     </div>
   );
 }
