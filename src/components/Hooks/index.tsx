@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext, useReducer } from 'react'
+import ColorDemo from './ColorDemo'
 
 const HooksContext = React.createContext(0)
 
@@ -38,6 +39,9 @@ const Hooks = () => {
             <h2>reducerCount: {reducerCount}</h2>
             <button onClick={() => handleReducer('add')}>+ 1</button>
             <button onClick={() => handleReducer('sub')}>- 1</button>
+
+            {/* ColorDemo */}
+            <ColorDemo />
         </div>
     )
 }
