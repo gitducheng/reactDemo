@@ -1,7 +1,11 @@
-import { createContext, useReducer } from 'react'
+import React, { createContext, useReducer } from 'react'
 
-export const ColorContext = createContext({color: {color: "blue"}, dispatch: {}})
-// export const ColorContext = createContext({})
+interface IColorContext {
+    textColor: string,
+    dispatch: (value: any) => void
+}
+
+export const ColorContext = createContext<IColorContext>({textColor: "blue", dispatch: (value) => {}})
 
 type Props = {
     children: Object

@@ -40,7 +40,7 @@ const Hooks = () => {
             <button onClick={() => handleReducer('add')}>+ 1</button>
             <button onClick={() => handleReducer('sub')}>- 1</button>
 
-            {/* ColorDemo */}
+            {/* ColorDemo，使用useContext、useReducer实现redux */}
             <ColorDemo />
         </div>
     )

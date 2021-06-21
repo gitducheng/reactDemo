@@ -1,20 +1,13 @@
-import {useContext} from 'react'
 import Buttons from "./Buttons"
-import {ColorComponent, ColorContext} from "./ColorComponent"
+import {ColorComponent} from "./ColorComponent"
+import ShowArea from './ShowArea'
 
 const ColorDemo = () => {
-    let {color} = useContext(ColorContext)
-
-    const onChangeColor = (newColor: any) => {
-        color = newColor
-        console.log(color)
-    }
-
     return (
         <div>
             <ColorComponent>
-                <p style={color}>ColorDemo{color}</p>
-                <Buttons onChangeColor={onChangeColor}/>
+                <ShowArea />
+                <Buttons />
             </ColorComponent>
         </div>
     )
