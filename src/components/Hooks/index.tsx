@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext, useReducer } from 'react'
 import ColorDemo from './ColorDemo'
+import MemoDemo from './MemoDemo'
 
 const HooksContext = React.createContext(0)
 
@@ -42,6 +43,9 @@ const Hooks = () => {
 
             {/* ColorDemo，使用useContext、useReducer实现redux */}
             <ColorDemo />
+
+            {/* useMemoDemo */}
+            <MemoDemo />
         </div>
     )
 }
