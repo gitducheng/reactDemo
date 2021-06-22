@@ -2,6 +2,7 @@
 import OrderList from '../OrderList';
 import Header from '../Header'
 import Hooks from '../Hooks'
+import RouterDemo from '../RouterDemo';
 import './style.css';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <OrderList />
       <Hooks />
+      <RouterDemo />
     </div>
   );
 }
