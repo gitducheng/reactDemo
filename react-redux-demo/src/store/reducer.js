@@ -21,6 +21,12 @@ const state = (state = defaultState, action) => {
         return newState
     }
 
+    if(action.type === "delList") {
+        let newState = {...state}
+        newState.listData.splice(action.index, 1)
+        return newState
+    }
+
     return state
 }
 
