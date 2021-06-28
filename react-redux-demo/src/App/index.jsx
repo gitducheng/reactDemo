@@ -6,20 +6,26 @@ import store from '../store';
 const App = () => {
     // console.log(store.getState())
     // 获取redux初始化的值
-    const listData = store.getState().listData
+    const defListData = store.getState().listData
     const defInputValue = store.getState().inputValue
 
     // 使用hooks定义input的变量
     const [inputValue, setInputValue] = useState(defInputValue)
+    const [listData, setListData] = useState(defListData)
 
     // 定义input输入框的change监听事件，并通过store.dispatch()派发，更新redux的值
     const changeInputValue = (e) => {
-      console.log(e.target.value)
       store.dispatch({type: "changeInput", value: e.target.value})
     }
     // 定义更新state状态函数，提供给store.subscribe()订阅注册
     const storeChange = () => {
       setInputValue(store.getState().inputValue)
+      setListData(store.getState().listData)
+    }
+
+    // 定义按钮点击事件，触发redux更新list值
+    const addList = () => {
+      store.dispatch({type: "addList"})
     }
 
     // redux更新，会执行已订阅redux的所有函数
@@ -27,9 +33,8 @@ const App = () => {
 
     return (
         <div>
-            <Input className={styles.addInput} onChange={changeInputValue} placeholder={inputValue} />
-            <Button type="primary">增加</Button>
-            <p>{inputValue}</p>
+            <Input className={styles.addInput} value={inputValue} onChange={changeInputValue} placeholder={inputValue} />
+            <Button type="primary" onClick={addList}>增加</Button>
             <div className={styles.listWrap}>
               <List
                 header={<div>Header</div>}

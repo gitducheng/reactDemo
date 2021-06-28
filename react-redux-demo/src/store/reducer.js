@@ -13,7 +13,14 @@ const state = (state = defaultState, action) => {
         newState.inputValue = action.value
         return newState
     }
-    
+
+    if(action.type === "addList") {
+        let newState = {...state}
+        newState.listData.push(newState.inputValue)
+        newState.inputValue = ""
+        return newState
+    }
+
     return state
 }
 
