@@ -1,4 +1,5 @@
 const defaultState = {
+    inputValue: 'input-redux-data',
     listData: [
         'Racing car sprays burning fuel into crowd.',
         'Japanese princess to wed commoner.',
@@ -7,6 +8,12 @@ const defaultState = {
 }
 
 const state = (state = defaultState, action) => {
+    if(action.type === "changeInput") {
+        let newState = {...state}
+        newState.inputValue = action.value
+        return newState
+    }
+    
     return state
 }
 
